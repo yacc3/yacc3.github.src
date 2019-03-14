@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Explore（浏览）"
+description: "Explore the Blog"
+group: navigation
+---
+{% include hub/setup %}
+
+<h2>按类别</h2>
+<ul class="tag_box inline">
+  {% assign categories_list = site.categories %}
+  {% include hub/categories_list %}
+</ul>
+<br>
+<hr>
+
+<h2>按标签</h2>
+<ul class="tag_box inline">
+  {% assign tags_list = site.tags %}
+  {% include hub/tags_list %}
+</ul>
+<br>
+<hr>
+
+<h2>所有页面</h2>
+<ul>
+<li><a href="/about.html">About（关于）</a></li>
+<li><a href="/archive.html">Archive（存档）</a></li>
+<li><a href="/categories.html">Categories（分类）</a></li>
+<li><a href="/tags.html">Tags（标签）</a></li>
+</ul>

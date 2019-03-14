@@ -1,0 +1,16 @@
+{% if site.safe and site.hub.analytics.provider and page.hub.analytics != false %}
+
+{% case site.hub.analytics.provider %}
+{% when "google" %}
+  {% include hub/analytics-providers/google %}
+{% when "getclicky" %}
+  {% include hub/analytics-providers/getclicky %}
+{% when "mixpanel" %}
+  {% include hub/analytics-providers/mixpanel %}
+{% when "piwik" %}
+  {% include hub/analytics-providers/piwik %}
+{% when "custom" %}
+  {% include custom/analytics %}
+{% endcase %}
+
+{% endif %}
